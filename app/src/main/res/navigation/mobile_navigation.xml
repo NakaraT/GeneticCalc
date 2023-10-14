@@ -21,5 +21,30 @@
         android:id="@+id/navigation_information"
         android:name="com.example.geneticcalc.ui.fragments.InformationFragment"
         android:label="@string/title_information"
-        tools:layout="@layout/fragment_information" />
+        tools:layout="@layout/fragment_information" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_navigation_to_profile"
+            app:destination="@id/navigation_relativeprofile"
+            app:popUpTo="@layout/fragment_relativesprofile"/>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_relativeprofile"
+        android:name="com.example.geneticcalc.ui.fragments.RelativesProfile"
+        android:label="Профиль"
+        tools:layout="@layout/fragment_relativesprofile" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+
+        <action
+            android:id="@+id/action_profile_to_navigation"
+            app:destination="@+id/navigation_information"
+            app:popUpTo="@layout/fragment_information" />
+    </fragment>
+
 </navigation>
