@@ -27,8 +27,9 @@ class RelativesRepository(context: Context) :
         dataSource = RelativesDataSource(context)
     }
 
-    override val relativesList: LiveData<List<RelativesEntity>>
-        get() = dataSource.relativesList
+    override fun relativesList(): LiveData<List<RelativesEntity>> {
+        return dataSource.relativesList
+    }
 
     override fun getRelativesItem(id: Int): LiveData<RelativesEntity> {
         return dataSource.getRelativesItem(id)

@@ -13,7 +13,7 @@ import com.example.geneticcalc.R
 import com.example.geneticcalc.databinding.FragmentRelativesprofileBinding
 import com.example.geneticcalc.ui.stateholder.viewModels.RelativesListItemViewModel
 
-abstract class RelativesProfile : Fragment() {
+class RelativesProfile : Fragment() {
 
     private var binding: FragmentRelativesprofileBinding? = null
     private var viewModel: RelativesListItemViewModel? = null
@@ -33,7 +33,7 @@ abstract class RelativesProfile : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this)[RelativesListItemViewModel::class.java]
         this.args?.let { viewModel!!.getRelativesItem(it.id) }
-        viewModel!!.relativesListItemLiveData!!.observe(viewLifecycleOwner) { relativesEntity ->
+        viewModel!!.relativesListItemLiveData.observe(viewLifecycleOwner) { relativesEntity ->
             binding!!.relativesType.setText(relativesEntity!!.relativesType)
             binding!!.eyeColor.setText(relativesEntity.eyeColor)
             binding!!.hairColor.setText(relativesEntity.hairColor)

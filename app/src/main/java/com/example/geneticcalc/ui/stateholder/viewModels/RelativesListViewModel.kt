@@ -10,7 +10,7 @@ import com.example.geneticcalc.data.repositories.RelativesRepository
 
 class RelativesListViewModel(application: Application) : AndroidViewModel(application) {
     private val repository = RelativesRepository(application)
-    var listLiveData: LiveData<List<RelativesEntity>> = repository.relativesList
+    var listLiveData: LiveData<List<RelativesEntity>> = repository.relativesList()
     fun addRelative() {
         repository.addRelative()
     }

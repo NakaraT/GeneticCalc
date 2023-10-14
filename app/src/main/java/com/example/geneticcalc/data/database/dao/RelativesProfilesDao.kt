@@ -13,7 +13,7 @@ interface RelativesProfilesDao {
     @Query("SELECT * FROM relatives_profiles_table")
     fun relativesList(): LiveData<List<RelativesEntity>>
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(relativesEntity: RelativesEntity)
 
     @Query("DELETE FROM relatives_profiles_table WHERE :id = id")

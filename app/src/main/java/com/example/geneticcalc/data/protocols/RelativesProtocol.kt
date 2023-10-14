@@ -6,7 +6,7 @@ import com.example.geneticcalc.data.database.entity.RelativesEntity
 import com.example.geneticcalc.data.models.PlaceholderPost
 
 interface RelativesProtocol {
-    val relativesList: LiveData<List<RelativesEntity>>
+    fun relativesList(): LiveData<List<RelativesEntity>>
 
     fun getRelativesItem(position: Int): LiveData<RelativesEntity>
     val post: LiveData<PlaceholderPost>
