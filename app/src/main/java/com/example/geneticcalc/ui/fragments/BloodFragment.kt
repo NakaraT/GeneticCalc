@@ -43,6 +43,7 @@ class BloodFragment : Fragment() {
 }
 
 
+
 //    @OptIn(DelicateCoroutinesApi::class)
 //    private fun downloadImage(imageUrl: String) {
 //        GlobalScope.launch(Dispatchers.IO) {
