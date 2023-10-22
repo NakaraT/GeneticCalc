@@ -6,4 +6,5 @@
     <string name="button_hand">Левша/Правша</string>
     <string name="button_blood">Группа крови</string>
     <string name="button_hairs">Цвет волос</string>
+    <string name="title_blood">Кровь</string>
 </resources>
